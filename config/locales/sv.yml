@@ -42,9 +42,13 @@ sv:
         created: Gruppen har skapats.
         not_created: Gruppen kunde inte skapas.
         deleted: Den valda gruppen har tagits bort.
+        new: Skapa ny grupp
       groups:
+        name: Namn
         show:
           add_member: Lägg till
+        edit: Redigera
+        delete: Ta bort
       category:
         index: Hantera Forumkategorier
         new: Skapar en ny Forumkategori
