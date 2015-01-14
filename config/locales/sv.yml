@@ -17,8 +17,10 @@ sv:
     admin:
       area: Administratörsområde
       welcome: "Välkommen till forems administratörsområde."
+      back_to_forums: "Tillbaka till forumet"
+      back_to_admin: "Tillbaka till admininistratörsområdet"
       forum:
-        index: Hanter Forum
+        index: Hantera Forum
         new: Skapar ett nytt forum
         new_link: Nytt Forum
         deleted: Det valda forumet har tagits bort. 
@@ -26,6 +28,7 @@ sv:
         not_created: Det här forumet kunde inte skapas.
         updated: Det där forumet har uppdaterats.
         not_updated: Det här forumet kunde inte uppdateras.
+        moderator_groups: Moderatörsgrupper
       forums:
         edit: Redigera
         delete: Ta bort
@@ -164,17 +167,27 @@ sv:
       title: "Moderatorverktyg för %{forum}"
   helpers:
     submit:
+      category:
+        create: Skapa Forumkategori
+        update: Uppdatera Forumkategori
       forum:
         create: Skapa Forum
         update: Uppdatera Forum
       topic:
         create: Skapa Tråd
         update: Uppdatera Tråd
+      group:
+        create: Skapa Grupp
+        update: Uppdatera Grupp
   simple_form:
     labels:
+      category:
+        name: Namn
       forum:
+        category: Forumkategori
         title: Titel
         description: Beskrivning
+        moderators: Moderatörer        
       topic:
         subject: Ämne
         locked: Låst
@@ -184,6 +197,8 @@ sv:
           text: Text
       post:
         text: Text
+      group:
+        name: Namn
 
   # General stuff
   time_ago_in_words: "%{time} sedan"
