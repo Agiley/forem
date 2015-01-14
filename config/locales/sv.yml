@@ -133,8 +133,8 @@ sv:
         'true': Den här tråden är nu låst.
         'false': Den här tråden är nu upplåst.
       pinned:
-        'true': Den här tråden är nu fastnålad.
-        'false': Den här tråden är nu inte längre fastnålad.
+        'true': Den här tråden är nu fastklistrad.
+        'false': Den här tråden är nu inte längre fastklistrad.
     topics:
       show:
         reply: Svara
@@ -150,8 +150,8 @@ sv:
           'true': Lås upp den här tråden
           'false': Lås den här tråden
         pin:
-          'true': Ta bort fastnålningen av den är tråden
-          'false': Nåla fast den här tråden
+          'true': Ta bort klistrningen av den är tråden
+          'false': Klistra fast den här tråden
     post:
       buttons:
         reply: Svara
@@ -166,7 +166,7 @@ sv:
       deleted: Ditt inlägg har tagits bort.
       deleted_with_topic: Det enda inlägget i tråden är borttaget. Tråden tas också bort.
       cannot_delete: Du kan inte ta bort ett inlägg som du inte äger.
-      in_reply_to: I svar på
+      in_reply_to: Som svar till
     posts:
       moderation:
         moderate: Moderera
@@ -203,7 +203,7 @@ sv:
       topic:
         subject: Ämne
         locked: Låst
-        pinned: Fastnålad
+        pinned: Klistrad
         hidden: Gömd
         posts:
           text: Text
