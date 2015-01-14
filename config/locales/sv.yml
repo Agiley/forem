@@ -1,4 +1,12 @@
 sv:
+  routes:
+    categories: kategorier
+    forums: forum
+    topics: amnen
+    posts: inlagg
+    subscribe: prenumerera
+    unsubscribe: avprenumerera
+  
   forem:
     general:
       forum: Forum
