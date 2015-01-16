@@ -7,24 +7,8 @@ Forem::Engine.routes.draw do
   
   localized do
     resources :categories, :only => [:index, :show]
-    
-    resources :forums, :only => [:index, :show], :path => "/" do
-      resources :topics, :except => :index do
-        resources :posts, :except => :index
-        member do
-          post :subscribe
-          post :unsubscribe
-        end
-      end
-    end
   end
 
-  get '/:forum_id/moderation', :to => "moderation#index", :as => :forum_moderator_tools
-  # For mass moderation of posts
-  put '/:forum_id/moderate/posts', :to => "moderation#posts", :as => :forum_moderate_posts
-  # Moderation of a single topic
-  put '/:forum_id/topics/:topic_id/moderate', :to => "moderation#topic", :as => :moderate_forum_topic
-  
   namespace :admin do
     root :to => "base#index"
     resources :groups do
@@ -50,4 +34,23 @@ Forem::Engine.routes.draw do
 
     get 'users/autocomplete', :to => "users#autocomplete", :as => "user_autocomplete"
   end
+
+  get '/:forum_id/moderation', :to => "moderation#index", :as => :forum_moderator_tools
+  # For mass moderation of posts
+  put '/:forum_id/moderate/posts', :to => "moderation#posts", :as => :forum_moderate_posts
+  # Moderation of a single topic
+  put '/:forum_id/topics/:topic_id/moderate', :to => "moderation#topic", :as => :moderate_forum_topic
+  
+  localized do
+    resources :forums, :only => [:index, :show], :path => "/" do
+      resources :topics, :except => :index do
+        resources :posts, :except => :index
+        member do
+          post :subscribe
+          post :unsubscribe
+        end
+      end
+    end
+  end
+  
 end
