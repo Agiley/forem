@@ -150,7 +150,7 @@ sv:
           'true': Lås upp den här tråden
           'false': Lås den här tråden
         pin:
-          'true': Ta bort klistrningen av den är tråden
+          'true': Ta bort klistringen av den är tråden
           'false': Klistra fast den här tråden
     post:
       buttons:
