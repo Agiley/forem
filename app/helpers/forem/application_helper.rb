@@ -6,8 +6,8 @@ module Forem
       forem_emojify(as_formatted_html(text))
     end
 
-    def forem_quote(text)
-      as_quoted_text(text)
+    def forem_quote(text, author: nil)
+      as_quoted_text(text, author: author)
     end
 
     def forem_markdown(text, *options)

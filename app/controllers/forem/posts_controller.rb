@@ -18,7 +18,7 @@ module Forem
       find_reply_to_post
 
       if params[:quote] && @reply_to_post
-        @post.text = view_context.forem_quote(@reply_to_post.text)
+        @post.text = view_context.forem_quote(@reply_to_post.text, author: forem_user.forem_name)
       elsif params[:quote] && !@reply_to_post
         flash[:notice] = t("forem.post.cannot_quote_deleted_post")
         redirect_to [@topic.forum, @topic]
