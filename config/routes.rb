@@ -47,6 +47,7 @@ Forem::Engine.routes.draw do
         resources :posts, :except => :index
         member do
           post :subscribe
+          get :unsubscribe
           post :unsubscribe
         end
       end
