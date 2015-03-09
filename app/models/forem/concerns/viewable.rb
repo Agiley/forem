@@ -10,6 +10,7 @@ module Forem
       end
 
       def view_for(user)
+        return unless user
         views.find_by(user_id: user.id)
       end
 
