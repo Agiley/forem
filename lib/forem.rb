@@ -28,9 +28,9 @@ module Forem
         extend Forem::Autocomplete
         include Forem::DefaultPermissions
 
-        has_many :forem_posts, :class_name => "Forem::Post", :foreign_key => "user_id"
-        has_many :forem_topics, :class_name => "Forem::Topic", :foreign_key => "user_id"
-        has_many :forem_memberships, :class_name => "Forem::Membership", :foreign_key => "member_id"
+        has_many :forem_posts, :class_name => "Forem::Post", :foreign_key => "user_id", :dependent => :nullify
+        has_many :forem_topics, :class_name => "Forem::Topic", :foreign_key => "user_id",  :dependent => :nullify
+        has_many :forem_memberships, :class_name => "Forem::Membership", :foreign_key => "member_id", :dependent => :destroy
         has_many :forem_groups, :through => :forem_memberships, :class_name => "Forem::Group", :source => :group
 
         def forem_moderate_posts?
