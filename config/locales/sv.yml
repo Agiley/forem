@@ -1,6 +1,15 @@
 sv:
+  routes:
+    categories: kategorier
+    forums: forum
+    topics: amnen
+    posts: inlagg
+    subscribe: prenumerera
+    unsubscribe: avprenumerera
+  
   forem:
     general:
+      deleted: "[avslutat konto]"
       forum: Forum
       topics: Trådar
       topic: Tråd
@@ -12,7 +21,12 @@ sv:
       flagged_for_spam: Ditt konto har flaggats för spam.
       cannot_create_topic: Du kan inte skapa en ny tråd vid detta tillfälle.
       cannot_create_post: Du kan inte göra ett nytt inlägg vid detta tillfälle.
-
+    
+    nil_user:
+      username: "[avslutat konto]"
+      name: Avslutat konto
+      email: ingen@exempel.se
+    
     access_denied: "Du har inte tillåtelse att göra det."
     admin:
       area: Administratörsområde
@@ -166,6 +180,7 @@ sv:
         spam: Spam
         success: De valda inläggen har modererats.
       post:
+        deleted: Avslutat konto
         pending_review: Det här inlägget väntar för tillfället på genomgång. Bara användaren som gjorde inlägget och moderatorer kan se det.
     moderation:
       title: "Moderatorverktyg för %{forum}"
@@ -211,4 +226,3 @@ sv:
   by: av
   started_by: "Startad av "
   are_you_sure: Är du säker?
-
